@@ -24,6 +24,34 @@ Also we can pipe the binary data into the inspector.
 cat compact-binary.bin | BondInspector.exe
 ```
 
+Then we will get the output like this:
+
+```bash
+> BondInspector.exe "binary.bin"
+0: Struct
+  0: BT_UINT32 - 105
+  1: BT_WSTRING - abc
+  2: BT_WSTRING - test-data
+  3: BT_LIST<BT_STRUCT> - 15 items
+    0: Struct
+      0: Struct
+        0: BT_UINT16 - 123
+        1: BT_UINT16 - 456
+      1: Struct
+        0: BT_INT32 - 1
+        1: BT_UINT16 - 2
+        2: BT_UINT16 - 3
+    1: Struct
+      0: Struct
+        0: BT_UINT16 - 456
+        1: BT_UINT16 - 789
+      1: Struct
+        0: BT_INT32 - 4
+        1: BT_UINT16 - 5
+        2: BT_UINT16 - 6
+...
+```
+
 ## Build
 
 To build the project, we need to install the [.NET Core SDK](https://dotnet.microsoft.com/download) first. Then run the following command to build the project.
