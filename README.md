@@ -24,6 +24,15 @@ Also we can pipe the binary data into the inspector.
 cat compact-binary.bin | BondInspector.exe
 ```
 
+## Build
+
+To build the project, we need to install the [.NET Core SDK](https://dotnet.microsoft.com/download) first. Then run the following command to build the project.
+
+```bash
+cd BondInspector
+dotnet build
+```
+
 ## Known issues
 
 In powershell, pipe data into the inspector will not work, because powershell pipe will corrupt the binary data. Please see this issue: <https://github.com/PowerShell/PowerShell/issues/1908>.
